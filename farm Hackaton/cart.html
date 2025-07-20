@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#buyButton {
+    background-color: #28a745;
+    color: white;
+}
+
+#addToCartButton {
+    background-color: #007bff;
+    color: white;
+}
+#NegoPrice {
+    background-color:#007bff;
+    color: #f8f8f8;
+    width: 100%;
+
+}
+
+</style>
+<body>
+    <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLIZBedok51EN8EEozo1MG0245wHwcGkyQwA&s" alt="Organic Fertilizer" class="product-image">
+        <h2>Organic Fertilizer</h2>
+        <p>Price: ₹80</p>
+        <button id="buyButton">Buy Now</button>
+        <button id="addToCartButton">Add to Cart</button>
+        <button id="NegoPrice"><a href="./chat.html" >NegoPrice</a></button>
+
+    </div>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('buyButton').addEventListener('click', function() {
+            window.location.href='address.html';
+});
+
+document.getElementById('addToCartButton').addEventListener('click', function() {
+    alert('Item added to cart!');
+});
+
+    </script>
+</body>
+</html>

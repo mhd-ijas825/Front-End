@@ -1,0 +1,214 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>My Smart Basket</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            padding: 16px;
+        }
+        .header, .search-bar, .basket-header, .product-grid {
+            margin-bottom: 16px;
+        }
+        .header, .search-bar, .basket-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header img {
+            height: 40px;
+            width: 40px;
+            margin-right: 8px;
+        }
+        .header button, .search-bar button, .product-card button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .search-bar input {
+            background-color: #333;
+            color: #fff;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            width: 300px;
+        }
+        .search-bar button {
+            background-color: #555;
+            margin-left: 8px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .product-card {
+            background-color: #2a2a2a;
+            border: 1px solid #333;
+            border-radius: 4px;
+            padding: 16px;
+            position: relative;
+        }
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 16px;
+        }
+        .discount-badge {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 4px 8px;
+            font-size: 12px;
+            font-weight: bold;
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            border-radius: 4px;
+        }
+        .product-card h3, .product-card p {
+            margin-bottom: 8px;
+        }
+        .product-card select, .product-card .price, .product-card .original-price, .product-card .quantity-control {
+            background-color: #333;
+            color: #fff;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+        .product-card .price {
+            color: #ff5722;
+        }
+        .product-card .original-price {
+            text-decoration: line-through;
+            color: #888;
+        }
+        .product-card .quantity-control {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .product-card .quantity-control button {
+            background-color: #333;
+            color: #fff;
+            padding: 4px 8px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="https://storage.googleapis.com/a1aa/image/cVpBSGpTLOYANdBH1fIM3vfNJdzPuv6CXjn3Ic4FTPnPU8pTA.jpg" alt="Logo"/>
+                <button>Shop by Category</button>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for Products..."/>
+                <button>Select Location</button>
+            </div>
+        </div>
+        <div class="basket-header">
+            <h1>My Smart Basket</h1>
+            <div>
+                <button><i class="fas fa-chevron-left"></i></button>
+                <button><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <div class="product-grid">
+            
+            <div class="product-card"><a href="cart.html">
+                <div class="discount-badge">38% OFF</div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLIZBedok51EN8EEozo1MG0245wHwcGkyQwA&s" alt="Capsicum - Green (Loose)"/>
+                <h3>fresho!</h3>
+                <p>Tomato</p>
+                <select>
+                    <option>1 kg</option>
+                </select>
+                <div class="price-info">
+                    <span class="price">₹80</span>
+                    <span class="original-price">₹128.77</span>
+                </div>
+                <button class="add-to-cart-btn">Har Din Sasta!</button>
+                <div class="quantity-control">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+            </div></a>
+
+            <div class="product-card"><a href="cart.html">
+                <div class="discount-badge">37% OFF</div>
+                <img src="https://storage.googleapis.com/a1aa/image/cJFDRohE2fwPHyEmi4wSdtPWUR1CVNYqhZazzREFtbaKKepTA.jpg" alt="Carrot - Orange (Loose)"/>
+                <h3>fresho!</h3>
+                <p>Carrot - Orange (Loose)</p>
+                <select>
+                    <option>1 kg</option>
+                </select>
+                <div class="price-info">
+                    <span class="price">₹60</span>
+                    <span class="original-price">₹95.89</span>
+                </div>
+                <button class="add-to-cart-btn">Har Din Sasta!</button>
+                <div class="quantity-control">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+            </div></a>
+
+            <a href="cart.html">
+            <div class="product-card">
+                <div class="discount-badge">58% OFF</div>
+                <img src="https://storage.googleapis.com/a1aa/image/eFb5jnuHCg0eOUbmIFe5ULD71TLHeMazC2ieEciPysvWiiPdC.jpg" alt="Cauliflower"/>
+                <h3>fresho!</h3>
+                <p>Cauliflower</p>
+                <select>
+                    <option>1 pc - (approx. 400 to 600 g)</option>
+                </select>
+                <div class="price-info">
+                    <span class="price">₹29</span>
+                    <span class="original-price">₹69.86</span>
+                </div>
+                <button class="add-to-cart-btn">Har Din Sasta!</button>
+                <div class="quantity-control">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+            </div></a>
+
+            
+            <div class="product-card"><a href="cart.html">
+                <div class="discount-badge">24% OFF</div>
+                <img src="https://storage.googleapis.com/a1aa/image/2rfoGfh7SLuOl0fd3d5CMtOWZjy8IbqUJ6fjBUaQA2qVRxnOB.jpg" alt="Coriander Leaves"/>
+                <h3>fresho!</h3>
+                <p>Coriander Leaves</p>
+                <select>
+                    <option>1 kg</option>
+                </select>
+                <div class="price-info">
+                    <span class="price">₹85.37</span>
+                    <span class="original-price">₹112.33</span>
+                </div>
+                <button class="add-to-cart-btn">Har Din Sasta!</button>
+                <div class="quantity-control">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+            </div></a>
+        </div>
+    </div>
+</body>
+</html>

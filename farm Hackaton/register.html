@@ -1,0 +1,87 @@
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-image: url(fruits\ 1.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .register-container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .register-container input[type="text"],
+        .register-container input[type="email"],
+        .register-container input[type="password"] {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #fff;
+            color: #fff;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+        .register-container input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        .register-container label {
+            color: #fff;
+        }
+        .register-container a {
+            color: #fff;
+            text-decoration: underline;
+        }
+        .register-container button {
+            background: #fff;
+            color: #000;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 2rem;
+            cursor: pointer;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2 class="text-white text-2xl mb-4">Register</h2>
+        <div class="mb-4">
+            <input type="text" placeholder="Username" class="focus:outline-none">
+            <i class="fas fa-user text-white"></i>
+        </div>
+        <div class="mb-4">
+            <input type="email" placeholder="Email" class="focus:outline-none">
+            <i class="fas fa-envelope text-white"></i>
+        </div>
+        <div class="mb-4">
+            <input type="password" placeholder="Password" class="focus:outline-none">
+            <i class="fas fa-lock text-white"></i>
+        </div>
+        <div class="mb-4">
+            <input type="password" placeholder="Confirm Password" class="focus:outline-none">
+            <i class="fas fa-lock text-white"></i>
+        </div>
+        <div class="flex justify-between items-center mb-4">
+            <div>
+                <input type="checkbox" id="terms">
+                <label for="terms">I agree to the terms and conditions</label>
+            </div>
+        </div>
+        <button><a href="./login.html"><div style="color:#000;">Register</div></a></button>
+        <p class="text-white mt-4">Already have an account? <a href="./login.html">Login</a></p>
+    </div>
+</body>
+</html>

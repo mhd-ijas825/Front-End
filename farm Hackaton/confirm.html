@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+    font-size: 100px;
+    color: green;
+    margin-bottom: 20px;
+}
+
+
+h1 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+</style>
+<body>
+    <div class="container">
+        <div class="icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="image">
+        <img src="https://cdn.pixabay.com/photo/2017/01/13/01/22/ok-1976099_1280.png" width="100px" height="100px" alt="rose">
+        </div>
+        <h1>Order Confirmed!</h1>
+        <p>Thank you for choosing our agricultural products.</p>
+        <p>Your order will be delivered shortly!</p>
+        <p id="dateTime"></p>
+        <button id="homeButton"><a href="FRESHFARMZONE.HTML"> Go to Home </a></button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Function to format date and time
+function formatDateTime(date) {
+    return date.toLocaleString();
+}
+
+// Display current date and time
+const now = new Date();
+document.getElementById("dateTime").innerText = `Order Date and Time: ${formatDateTime(now)}`;
+
+document.getElementById("homeButton").addEventListener("click", function() {
+    // Handle navigation to home page
+    alert("Navigating to home...");
+    // You can replace the alert with actual navigation logic, e.g.:
+    // window.location.href = 'home.html';
+});
+
+    </script>
+</body>
+</html>

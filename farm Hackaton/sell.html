@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Product Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .product-form {
+            margin-bottom: 20px;
+            background: #fff;
+            padding: 10px;
+            padding-right: 30px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .product-form input, .product-form textarea, .product-form select {
+            width: 100%;
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .product-form img {
+            max-width: 100px;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .cart {
+            margin-top: 20px;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .checkout {
+            background-color: #007bff;
+        }
+
+        .checkout:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Product Store</h1>
+    </header>
+    <main>
+        <section class="product-form">
+            <h2>Add a New Product</h2>
+            <input type="text" id="productName" placeholder="Product Name" required>
+            <input type="file" id="productImage" accept="image/*" required>
+            <textarea id="productDescription" placeholder="Product Description" rows="4" required></textarea>
+            <label for="productPrice">Price: ₹</label>
+            <input type="number" id="productPrice" min="1" max="100" value="10" oninput="updatePrice(this.value)">
+            <button onclick="checkout()">Add Product</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 By Hydra</p>
+    </footer>
+    <script>
+        function checkout() {
+            alert('Checkout functionality not implemented yet.');
+        }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Address</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 48%;
+    padding: 10px;
+    background-color: #5cb85c;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 2%;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+.hidden {
+    display: none;
+}
+
+#addressList {
+    margin-top: 20px;
+}
+
+</style>
+<body>
+    <div class="container">
+        <h1>Add Address</h1>
+        <form id="addressForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="street">Street:</label>
+            <input type="text" id="street" required>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" required>
+
+            <label for="state">State:</label>
+            <input type="text" id="state" required>
+
+            <label for="zip">Zip Code:</label>
+            <input type="text" id="zip" required>
+
+            <button type="submit">Confirm Address</button>
+        </form>
+
+        <div id="confirmation" class="hidden">
+            <h2>Confirm Your Address</h2>
+            <p id="confirmText"></p>
+            <button id="confirmButton"> <a href="order.html">Confirm</a></button>
+            <button id="editButton">Edit</button>
+        </div>
+
+        <div id="addressList"></div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('addressForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Collect input values
+    const name = document.getElementById('name').value;
+    const street = document.getElementById('street').value;
+    const city = document.getElementById('city').value;
+    const state = document.getElementById('state').value;
+    const zip = document.getElementById('zip').value;
+
+    // Display confirmation
+    const confirmText = document.getElementById('confirmText');
+    confirmText.innerText = `${name}, ${street}, ${city}, ${state}, ${zip}`;
+    document.getElementById('confirmation').classList.remove('hidden');
+
+    // Handle confirmation
+    document.getElementById('confirmButton').onclick = function() {
+        const addressList = document.getElementById('addressList');
+        const addressItem = document.createElement('div');
+        addressItem.className = 'address-item';
+        addressItem.innerText = confirmText.innerText;
+
+        addressList.appendChild(addressItem);
+        clearForm();
+        window.location.href="./payment.html";
+    };
+
+    // Handle edit
+    document.getElementById('editButton').onclick = function() {
+        document.getElementById('confirmation').classList.add('hidden');
+    };
+});
+
+function clearForm() {
+    document.getElementById('addressForm').reset();
+    document.getElementById('confirmation').classList.add('hidden');
+}
+
+    </script>
+</body>
+</html>
